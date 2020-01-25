@@ -20,8 +20,8 @@ class Board():
                          Pieces.Knight("Black"),
                          Pieces.Rook("Black")
                          ]
-        self.board[1] = [Pieces.Pawn("Black")]*8
-        self.board[6] = [Pieces.Pawn("White")]*8
+        self.board[1] = [Pieces.Pawn("Black") for _ in range(8)]
+        self.board[6] = [Pieces.Pawn("White") for _ in range(8)]
         self.board[7] = [
                          Pieces.Rook("White"),
                          Pieces.Knight("White"),
