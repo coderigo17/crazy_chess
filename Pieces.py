@@ -49,7 +49,7 @@ class Bishop(Piece):
 class Queen(Piece):
 
     def __init__(self, player):
-        super().__init__("Queen ", 10, player)
+        super().__init__("Queen ", 9, player)
 
     def move(self, start, end):
         pass
