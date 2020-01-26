@@ -1,13 +1,14 @@
 # Every piece has a type, value, and belongs to a player
 class Piece():
 
-    def __init__(self, type, value, player):
+    def __init__(self, player, position, type, value):
+        self.player = player
+        self.position = position
         self.type = type
         self.value = value
-        self.player = player
 
     # Each piece has its own rules for legal moves
-    def move(self, start, end):
+    def move(self, target):
         pass
 
     # String representation of each piece
@@ -16,48 +17,48 @@ class Piece():
 
 class Pawn(Piece):
 
-    def __init__(self, player):
-        super().__init__("Pawn  ", 1, player)
+    def __init__(self, player, position):
+        super().__init__(player, position, "Pawn  ", 1)
 
-    def move(self, start, end):
+    def move(self, target):
         pass
 
 class Rook(Piece):
 
-    def __init__(self, player):
-        super().__init__("Rook  ", 5, player)
+    def __init__(self, player, position):
+        super().__init__(player, position, "Rook  ", 5)
 
-    def move(self, start, end):
+    def move(self, target):
         pass
 
 class Knight(Piece):
 
-    def __init__(self, player):
-        super().__init__("Knight", 3, player)
+    def __init__(self, player, position):
+        super().__init__(player, position, "Knight", 3)
 
-    def move(self, start, end):
+    def move(self, target):
         pass
 
 class Bishop(Piece):
 
-    def __init__(self, player):
-        super().__init__("Bishop", 3, player)
+    def __init__(self, player, position):
+        super().__init__(player, position, "Bishop", 3)
 
-    def move(self, start, end):
+    def move(self, target):
         pass
 
 class Queen(Piece):
 
-    def __init__(self, player):
-        super().__init__("Queen ", 9, player)
+    def __init__(self, player, position):
+        super().__init__(player, position, "Queen ", 9)
 
-    def move(self, start, end):
+    def move(self, target):
         pass
 
 class King(Piece):
 
-    def __init__(self, player):
-        super().__init__("King  ", 1000, player)
+    def __init__(self, player, position):
+        super().__init__(player, position, "King  ", 1000)
 
-    def move(self, start, end):
+    def move(self, target):
         pass
